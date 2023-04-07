@@ -109,15 +109,121 @@
         </div>    
       </section>
       <!-- fine section portfolio -->
+
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- inizio section offer-->
       <section id="offer" class="bg-info">
         <div class="container p-4">
           <h2 class="text-center text-uppercase">Want an offer?</h2>
           <!-- TODO: PROGETTARE IL FORM QUI -->
+    <form onsubmit="submitForm(event)">  
+          <div class="row overview row justify-content-md-center">
+            <div class="col-6">
+                    <div class="mb-3">
+                      <label for="firstname" class="form-label">First name</label>
+                      <input class="form-control form-control-sm" type="text" placeholder="Enter your first name..." aria-label=".form-control-sm example" id="firstname">
+                    </div> 
+            </div>
+
+            <div class="col-6">
+                
+                    <div class="mb-3">
+                      <label for="lastname" class="form-label">Last name</label>
+                      <input class="form-control form-control-sm" type="text" placeholder="Enter your last name..." aria-label=".form-control-sm example" id="lastname">
+                    </div>
+                
+            </div>
+
+        </div>
+
+
+        <div class="row overview row justify-content-md-center">
+            <div class="col-6">
+                
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input class="form-control form-control-sm" type="text" placeholder="name@example.com" aria-label=".form-control-sm example" id="email">
+                    </div>
+                
+            </div>
+
+            <div class="col-6">
+                
+                    <div class="mb-3">
+                      <label for="hoursrequest" class="form-label">Hours requested</label>
+                      <input class="form-control form-control-sm" type="text" placeholder="Hours requested..." aria-label=".form-control-sm example" id="hoursrequest">
+                    </div>
+                 
+            </div>
+
+        </div>
+
+
+        <div class="row overview row justify-content-md-center">
+            <div class="col-6">
+                
+                    <div class="mb-3">
+                      <label for="type-of-work" class="form-label">Type of Work</label>
+                        <select class="form-select form-select-sm" aria-label=".form-control-sm example" id="select-type-of-work">
+                            <option value="backend-price">backend</option>
+                            <option value="frontend-price">frontend</option>
+                            <option value="analisi-progettuale-price">analisi progettuale</option>
+                    
+                        </select>
+                    </div>
+                
+            </div>
+
+            <div class="col-6">
+                
+                    <div class="mb-3">
+                      <label for="passcode" class="form-label">Passcode</label>
+                      <input class="form-control form-control-sm" type="text" aria-label=".form-control-sm example" id="passcode">
+                    </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row overview justify-content-md-center">
+            <div class="col-12">
+                
+                    <div class="mb-3">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-control" rows="3" placeholder="Specify your work commission..." id="message"></textarea>
+                    </div>
+                 
+            </div>
+        </div>
+    </div>
+
+        <div class= "row overview justify-content-md-center">
+            <div class="col-12">
+                <div class="bg-aqua-footer-button">
+                    <button type="submit" class="btn btn-warning" id="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
         </div>   
       </section>
       <!-- fine section offer-->
     </main>
+
     <!-- fine main -->
     <!-- inizio footer -->
     <footer class="footer bg-dark text-center text-secondary pt-5">
