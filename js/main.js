@@ -22,5 +22,23 @@ function submitForm(event){
             break;
     }
 
+// TODO: trasforma l'imput inviato dall'utente in numero
 
+    let selectedWorkHours = document.getElementById("hoursrequest");
+    selectedWorkHours = parseFloat(submitForm);
+
+    if (starterPriceBackend){
+        let backendFinalPrice = (starterPriceBackend * selectedWorkHours).toFixed(2);
+        console.log(backendFinalPrice);
+
+    } else if (starterFrontendPrice) {
+        let frontendFinalPrice = (starterFrontendPrice * selectedWorkHours).toFixed(2);
+        console.log(frontendFinalPrice);
+    }
+    
+    else {
+        let analisiprogettualeFinalPrice = (starterAnalisiProgettualePrice * selectedWorkHours).toFixed(2);
+        console.log(analisiprogettualeFinalPrice)
+    }
 }
+
