@@ -1,6 +1,7 @@
 // Programma Principale ------------------------------
 
-
+// Codici sconto del 25%
+let discountCodes = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 
 
 //----------------------------------------------------
@@ -55,8 +56,32 @@ function submitForm(event){
             break;
     }
 
-// TODO: trasforma l'imput inviato dall'utente in numero
+// Calcolo con aggiunta codice sconto
 
+    let discountCodeUser = document.getElementById("discountCodeImput");
+
+    let isDiscountCodeAvailable = discountCodes.includes(discountCodeUser);
+
+    if(isDiscountCodeAvailable) {
+        price = price * 0.75;
+        discountCodes = removeElementFromArray(discountCodes, discountCodeUser);
+    } else if (discountCodeUser != "") {
+        document.getElementById("discountCodeImput").classList.add("text-danger");
+        document.getElementById("applied-discount-result").innerHTML = "Il codice sconto non è valido!";
+    } else {
+        document.getElementById("applied-discount-result").innerHTML = "";
+    }
+
+// Mostrare codice all'utente
+
+document.getElementById("price").innerHTML = price.toFixed(2);
 
 }
 
+
+function removeElementFromArray(array, elementToRemove) {
+
+    const index = array.indexOf(elementToRemove);
+    array.splice(index, 1);
+    return array;
+}
