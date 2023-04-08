@@ -1,7 +1,28 @@
+// Programma Principale ------------------------------
 
+
+
+
+//----------------------------------------------------
+
+
+// Funzioni ------------------------------------------
 
 function submitForm(event){
     event.preventDefault();
+
+// Validazione imput ore di lavoro
+
+    let workHours = document.getElementById("hoursRequested").value;
+
+    if (isNaN(workHours) || workHours == "") {
+        alert("Please insert a number");
+    }
+
+    workHours = parseFloat(workHours);
+    console.log(workHours);
+
+// Tipo di lavoro selezionato dall'utente
 
     let selectedProjectType = document.getElementById("select-type-of-work").value;
     console.log(selectedProjectType);
@@ -24,8 +45,6 @@ function submitForm(event){
 
 // TODO: trasforma l'imput inviato dall'utente in numero
 
-    let selectedWorkHours = document.getElementById("hoursrequest");
-    selectedWorkHours = parseFloat(submitForm);
 
     if (starterPriceBackend){
         let backendFinalPrice = (starterPriceBackend * selectedWorkHours).toFixed(2);
