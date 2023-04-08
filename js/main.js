@@ -11,6 +11,8 @@
 function submitForm(event){
     event.preventDefault();
 
+    let price;
+
 // Validazione imput ore di lavoro
 
     let workHours = document.getElementById("hoursRequested").value;
@@ -27,37 +29,34 @@ function submitForm(event){
     let selectedProjectType = document.getElementById("select-type-of-work").value;
     console.log(selectedProjectType);
 
-    let starterPriceBackend = 20.50;
-    let starterFrontendPrice = 15.30;
-    let starterAnalisiProgettualePrice = 33.60;
+    let backendPrice = document.getElementById("backendPrice").innerText;
+    backendPrice = parseFloat(backendPrice);
+
+    let frontendPrice = document.getElementById("frontendPrice").innerText;
+    frontendPrice= parseFloat(frontendPrice);
+
+    let analysisPrice = document.getElementById("analysisPrice").innerText;
+    analysisPrice = parseFloat(analysisPrice);
+
+// Calcolo prezzo del lavoro
 
     switch(selectedProjectType){
         case "backend-price":
-            starterPriceBackend;
+            price = backendPrice * workHours;
+            console.log(price);
             break;
         case "frontend-price":
-            starterFrontendPrice;
+            price = frontendPrice * workHours;
+            console.log(price);
             break; 
         case "analisi-progettuale-price":
-            starterAnalisiProgettualePrice;
+            price = analysisPrice * workHours;
+            console.log(price);
             break;
     }
 
 // TODO: trasforma l'imput inviato dall'utente in numero
 
 
-    if (starterPriceBackend){
-        let backendFinalPrice = (starterPriceBackend * selectedWorkHours).toFixed(2);
-        console.log(backendFinalPrice);
-
-    } else if (starterFrontendPrice) {
-        let frontendFinalPrice = (starterFrontendPrice * selectedWorkHours).toFixed(2);
-        console.log(frontendFinalPrice);
-    }
-    
-    else {
-        let analisiprogettualeFinalPrice = (starterAnalisiProgettualePrice * selectedWorkHours).toFixed(2);
-        console.log(analisiprogettualeFinalPrice)
-    }
 }
 

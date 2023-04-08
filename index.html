@@ -176,11 +176,17 @@
                     <div class="mb-3">
                       <label for="type-of-work" class="form-label">Type of Work</label>
                         <select class="form-select form-select-sm" aria-label=".form-control-sm example" id="select-type-of-work">
-                            <option value="backend-price">backend</option>
-                            <option value="frontend-price">frontend</option>
-                            <option value="analisi-progettuale-price">analisi progettuale</option>
+                            <option value="backend-price">Backend</option>
+                            <option value="frontend-price">Frontend</option>
+                            <option value="analisi-progettuale-price">Analisi Progettuale</option>
                     
                         </select>
+
+                        <ul>
+                          <li>Backend: <span id="backendPrice">20.50</span>€/h </li>
+                          <li>Frontend: <span id="frontendPrice">15.30</span>€/h</li>
+                          <li>Analisi Progettuale: <span id="analysisPrice">33.60</span>€/h</li>
+                        </ul>
                     </div>
                 
             </div>
@@ -203,18 +209,18 @@
                       <label for="message" class="form-label">Message</label>
                       <textarea class="form-control" rows="3" placeholder="Specify your work commission..." id="message"></textarea>
                     </div>
-                 
+                   
+                   
+                    <div class= "row overview justify-content-md-center">
+                      <div class="col-12">
+                          <div class="bg-aqua-footer-button">
+                              <button type="submit" class="btn btn-warning" id="send-button">Send</button>
+                          </div>
+                      </div>
+                  </div>
             </div>
         </div>
     </div>
-
-        <div class= "row overview justify-content-md-center">
-            <div class="col-12">
-                <div class="bg-aqua-footer-button">
-                    <button type="submit" class="btn btn-warning" id="send-button">Send</button>
-                </div>
-            </div>
-        </div>
     </form>
 </div>
 
